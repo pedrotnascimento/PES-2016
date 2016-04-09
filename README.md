@@ -22,17 +22,26 @@ Descrição: Programa simples que tem como objetivo principal fazer o popular sc
 _"Sempre que descrever algo em documentos, deve-se atentar para o uso de pré e pós-condições. "_
 
 função: sacar
+
  Cliente: cliente que deseja sacar
+ 
  retirada: valor a ser retirado
+ 
  return: valor retirado
+ 
  pré-cond: cliente precisa fazer login
+ 
  pos-cond: Ao final da transação, saldo atual será o saldo anterior menos o valor retirado
 
 
 Construtor: Cliente
+
 nome: nome do cliente, string
+
 senha: senha do cliente, número
+
 saldo: saldo do cliente, default = 0 
+
 limite: limite de saque/empréstimo do cliente
 
 retorno: objeto cliente instanciado
