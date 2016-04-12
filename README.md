@@ -19,7 +19,7 @@ Descrição: Programa simples que tem como objetivo principal abstrair um sistem
 ##(Regra 2)##
 _"Sempre que descrever algo em documentos, deve-se atentar para o uso de pré e pós-condições. "_
 
-Função: sacar( cliente, retirada)
+###Função: sacar( cliente, retirada)###
 
  cliente: cliente que deseja sacar
  
@@ -33,7 +33,7 @@ Função: sacar( cliente, retirada)
 
 
  
-Construtor: Cliente(nome, senha)
+###Construtor: Cliente(nome, senha)###
 
 nome: nome do cliente, string
 
