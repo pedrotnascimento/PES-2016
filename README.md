@@ -4,13 +4,13 @@ Sistema bancário
 
 ##(Regra 1)##
 
-TÍTULO: CADASTRO |
+TÍTULO: CADASTRO
 
-AUTORIA: Pedro Nascimento |
+AUTORIA: Pedro Nascimento
 
-DATA: 09/04/16 |
+DATA: 09/04/16
 
-VERSÃO: 1.0 |
+VERSÃO: 1.0
 
 INDICADOR DE CONTEÚDO: 83 linhas de código
 
