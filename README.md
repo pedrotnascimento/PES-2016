@@ -1,29 +1,27 @@
 # PES-2016
 
-# PES
-
-Cadastro
+Sistema bancário
 
 ##(Regra 1)##
 
 TÍTULO: CADASTRO |
 
-AUTORIA: Marcio Alves |
+AUTORIA: Pedro Nascimento |
 
-DATA: 14/04/2015 |
+DATA: 09/04/16 |
 
 VERSÃO: 1.0 |
 
 INDICADOR DE CONTEÚDO: 83 linhas de código
 
-Descrição: Programa simples que tem como objetivo principal fazer o popular scrit de cadastro de clientes. 
+Descrição: Programa simples que tem como objetivo principal abstrair um sistema bancário. 
 
 ##(Regra 2)##
 _"Sempre que descrever algo em documentos, deve-se atentar para o uso de pré e pós-condições. "_
 
-função: sacar
+Função: sacar( cliente, retirada)
 
- Cliente: cliente que deseja sacar
+ cliente: cliente que deseja sacar
  
  retirada: valor a ser retirado
  
@@ -35,7 +33,7 @@ função: sacar
 
 
  
-Construtor: Cliente
+Construtor: Cliente(nome, senha)
 
 nome: nome do cliente, string
 
@@ -50,13 +48,13 @@ retorno: objeto cliente instanciado
 
 ##(Regra 3) Divisão do programa:##
 _"Quando decompomos/dividimos algo devemos fazê-lo de tal modo que a divisão resulte em no mínimo 3 partes e no máximo 6 partes"_
-+ ) Classe Clientes
+1 ) Classe Cliente
 
-+ ) Instacialização de clientes;
+2 ) Instacialização de clientes;
 
-+ ) Ações funcionais do cliente: Login, Sacar, Realizar empréstimo, Depositar
+3 ) Ações funcionais do cliente: Login, Sacar, Realizar empréstimo, Depositar
 
-+ ) Ações não funcionais do cliente, i.e, de caráter informacional: Consulta de nome, limite de saque e saldo
+4 ) Ações não funcionais do cliente, i.e, de caráter informacional: Consulta de nome, limite de saque e saldo
 
 
 ##(Regra 4) ##
@@ -72,13 +70,12 @@ _"Simple solutions"_
 Cada função faz apenas uma coisa, a inter-relação entre elas é fraca.
 
 
-(Regra 6) 
+##(Regra 6) ##
 Diário de Produção:
 
 9/4 - Pensei em fazer uma aplicação simples de banco; 
 Já sabia um pouquinho de Lua e sei um pouco de python então tive um bom começo
 Fiz uma abstração básica de um banco, porém, tomei cuidados para que a aplicação
-não ficasse sem propriedades do banco como segurança:
+não ficasse sem propriedades inerentes ao um banco como segurança:
 - para sacar, cliente precisa fazer login
 - Não se pode alterar nome ou senha, só o adm tem esse direito.
-
