@@ -48,6 +48,7 @@ retorno: objeto cliente instanciado
 
 ##(Regra 3) Divisão do programa:##
 _"Quando decompomos/dividimos algo devemos fazê-lo de tal modo que a divisão resulte em no mínimo 3 partes e no máximo 6 partes"_
+
 1 ) Classe Cliente
 
 2 ) Instacialização de clientes;
