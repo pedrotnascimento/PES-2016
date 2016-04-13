@@ -1,13 +1,10 @@
 --[[
-Título: Sistema simples de bano
+Backend
+Modulo responsável pelas funções executadas pela abstração do servidor(Backend)
 Autoria: Pedro Nascimento
 Data: 09/04/2016
 Versão: 1.0
 Indicador de Conteúdo: 76 linhas,
-Descrição:
-Sistema simples de banco. O sistema tem as principais funções de um banco,
-tais como: Saque, login, empréstimo, ver saldo, ver titular, ver limite de conta.
-
 ]]
 
 
@@ -42,14 +39,23 @@ clientes[3] = Cliente("Celia", 123)
  senha: senha do cliente
  ]]
  function login(nome, senha)
+	--DBG-- print(nome .. senha )
+	senha = tonumber(senha)
 	for i, cliente in ipairs(clientes) do
+		--DBG-- print(cliente.nome)
 		if cliente.nome == nome and cliente.senha == senha then
 			print ("login sucessfull")
 			cliente.login = true
-			return
+			return 0
 		end
 	end
 end
 
-
+function busca_cliente(nome)
+	for i, cliente in ipairs(clientes) do
+		if cliente.nome == nome then
+			return cliente
+		end
+	end
+end
 

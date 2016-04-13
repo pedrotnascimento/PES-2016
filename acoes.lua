@@ -1,6 +1,9 @@
 --[[
 acoes.lua
-MÛdulo de aÁıes do cliente
+MÛdulo de aÁıes/operaÁıes que o cliente pode executar
+indicador de conte˙do: 67 linhas
+Autor: Pedro Nascimento
+Data: 12/04/2016
 ]]
 
 
@@ -16,9 +19,13 @@ MÛdulo de aÁıes do cliente
  function sacar (cliente, retirada)
 	if cliente.login ==true then
 		if (cliente.saldo - retirada) > 0 and cliente.limite > retirada then
+			old_saldo = cliente.saldo
 			cliente.saldo = cliente.saldo - retirada
 			print("Foi retirado "..retirada.." reais")
-			return retirada
+			if (cliente.saldo == old_saldo - retirada) then
+				return retirada
+			else print("pos-cond falsa")
+			end
 		end
 	end
  end
@@ -26,14 +33,21 @@ MÛdulo de aÁıes do cliente
 --[[
 cliente: cliente que ter√° valor depositado na conta
 deposito: valor depositado
-pr√©-cond: cliente existir
+pr√©-cond: cliente estar logado
 p√≥s-cond: saldo do cliente ser√° o saldo anterior mais o valor do dep√≥sito
 ]]
  function depositar (cliente, deposito)
-	cliente.saldo = cliente.saldo + deposito
-	print("Foi depositado "..deposito.." reais, no cliente"..cliente.nome)
-	return 0
- end
+	if cliente.login == true  then
+		old_saldo = cliente.saldo
+		cliente.saldo = cliente.saldo + deposito
+		if cliente.saldo == old_saldo + deposito then
+			print("Foi depositado "..deposito.." reais, no cliente "..cliente.nome)
+			return 0
+		else print("pos-cond falsa")
+		end
+	else print("cliente n„o est· logado")
+	end
+end
 
 --[[
 cliente: cliente que pegar√° emprestimo
@@ -41,10 +55,16 @@ valor: valor a ser emprestado
 pr√©-cond: cliente logado
 p√≥s-cond: saldo do cliente ser√° o saldo anterior mais o valor do empr√©stimo
 ]]
- function emprestimo (cliente, valor)
+ function retirar_emprestimo (cliente, valor)
 	if cliente.login ==true then
+		old_saldo = cliente.saldo
 		cliente.saldo = cliente.saldo + valor
-		return 0
+		if cliente.saldo == old_saldo + valor then
+			print("foi emprestado a sua conta "..valor.." reais")
+			return 0
+		else print("pos-cond falsa")
+		end
+	else print("cliente nao est· logado")
 	end
  end
 
