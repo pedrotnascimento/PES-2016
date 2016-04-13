@@ -80,3 +80,8 @@ Fiz uma abstração básica de um banco, porém, tomei cuidados para que a aplic
 não ficasse sem propriedades inerentes ao um banco como segurança:
 - para sacar, cliente precisa fazer login
 - Não se pode alterar nome ou senha, só o adm tem esse direito.
+
+12/4 - Ao receber novas orientações do professor resolvi gerar uma interface
+		e gerar uma main. Assim eu posso estruturar melhor a aplicação, e ainda 
+		tornar a aplicação mais amigável para o cliente da aplicação
+		
