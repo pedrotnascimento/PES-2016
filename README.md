@@ -21,7 +21,7 @@ _"Sempre que descrever algo em documentos, deve-se atentar para o uso de pré e 
 
 Acima de cada função foi escrito as pré-condições e as pós condições para a função ser executada
 Inclusive condições estão sendo verificadas nas funções*
-Para fins educacionais foi feito apenas no módulo acao.lua
+Para fins educacionais foi feito apenas no módulo acao.lua	
 
 ##(Regra 3) Divisão do programa:##
 _"Quando decompomos/dividimos algo devemos fazê-lo de tal modo que a divisão resulte em no mínimo 3 partes e no máximo 6 partes"_
