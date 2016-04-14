@@ -61,4 +61,4 @@ não ficasse sem propriedades inerentes ao um banco como segurança:
 12/4 - Ao receber novas orientações do professor resolvi gerar uma interface
 		e gerar uma main. Assim eu posso estruturar melhor a aplicação, e ainda 
 		tornar a aplicação mais amigável para o cliente da aplicação
-		
+13/3 - Adiconei a estrutura.
