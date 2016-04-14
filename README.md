@@ -19,32 +19,9 @@ Descrição: Programa simples que tem como objetivo principal abstrair um sistem
 ##(Regra 2)##
 _"Sempre que descrever algo em documentos, deve-se atentar para o uso de pré e pós-condições. "_
 
-###Função: sacar( cliente, retirada)###
-
- cliente: cliente que deseja sacar
- 
- retirada: valor a ser retirado
- 
- return: valor retirado
- 
- pré-cond: cliente precisa fazer login
- 
- pos-cond: Ao final da transação, saldo atual será o saldo anterior menos o valor retirado
-
-
- 
-###Construtor: Cliente(nome, senha)###
-
-nome: nome do cliente, string
-
-senha: senha do cliente, número
-
-saldo: saldo do cliente, default = 0 
-
-limite: limite de saque/empréstimo do cliente
-
-retorno: objeto cliente instanciado
-
+Acima de cada função foi escrito as pré-condições e as pós condições para a função ser executada
+Inclusive condições estão sendo verificadas nas funções*
+Para fins educacionais foi feito apenas no módulo acao.lua
 
 ##(Regra 3) Divisão do programa:##
 _"Quando decompomos/dividimos algo devemos fazê-lo de tal modo que a divisão resulte em no mínimo 3 partes e no máximo 6 partes"_
